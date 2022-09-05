@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Soulda - Blog</title>
+    <style></style>
+  </head>
+  <style>
+
+  @import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      /* scroll-behavior: smooth; */
+      /* scroll-padding-top: 2rem; */
+    }
+
+    html {
+      /* 10px / 16px = 0.625 = 6.25% */
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      color: #555;
+      background-color: #edf6fb;
+    }
+
+    /**************************/
+    /* Header */
+    /**************************/
+
+    .header {
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3.2rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    /**************************/
+    /* NAV */
+    /**************************/
+
+    .main-nav {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+      font-weight: 500;
+    }
+
+    .main-nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+    }
+
+    .notification {
+      gap: 3rem;
+    }
+
+    .fa-solid {
+      color: #555;
+      font-size: 2.5rem;
+    }
+
+    .fa-solid:hover {
+      color: #4ca4d4;
+    }
+
+    .logo-login {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+
+    .logo-login:hover {
+      border: 1px solid #5eadd8;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      text-decoration: none;
+      color: #555;
+
+      transition: all 0.3s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active {
+      color: #4ca4d4;
+    }
+
+    .link-login:link,
+    .link-login:visited {
+      display: inline-block;
+      padding: 1.2rem 2.4rem;
+      border-radius: 9px;
+      color: #fff;
+      background-color: #4ca4d4;
+    }
+
+    .link-login:hover,
+    .link-login:active {
+      background-color: #70b6dd;
+    }
+
+    .search-form {
+      width: 40rem;
+      height: 4rem;
+      border: 1.7px solid #555;
+      display: flex;
+      align-items: center;
+      border-radius: 0.5rem;
+    }
+
+    .search-form input {
+      font: 1.6rem;
+      height: 100%;
+      padding: 0 1.2rem;
+      width: 90%;
+      text-transform: none;
+      color: #555;
+    }
+
+    .search-form label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 10%;
+      font-size: 1.8rem;
+      border-top-right-radius: 0.5rem;
+      cursor: pointer;
+      background-color: #fff;
+
+      transition: all 0.3s;
+    }
+
+    .search-form label:hover,
+    .search-form label:active {
+      color: #4ca4d4;
+    }
+
+    /**************************/
+    /* SECTION ABOUT */
+    /**************************/
+
+    .container {
+      padding: 12rem 8rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .box-inner {
+      background-color: #fff;
+      min-height: 65rem;
+      border-radius: 9px;
+      padding: 5rem 2rem;
+      border: 2px solid #777;
+      margin-top: 12rem;
+      display: flex;
+      gap: 5rem;
+      justify-content: space-between;
+    }
+
+    .box-img {
+      width: 40%;
+      text-align: center;
+    }
+
+    .box-img img {
+      border-radius: 9px;
+      width: 80%;
+      height: 80%;
+    }
+
+    .box-img .btn {
+      text-decoration: none;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 5rem;
+      padding: 1.2rem 4.8rem;
+      background-color: #4ca4d4;
+      color: #fff;
+      border-radius: 9px;
+    }
+
+    .box-text {
+      text-align: center;
+      width: 60%;
+    }
+
+    .box-text h3 {
+      text-transform: uppercase;
+      letter-spacing: 1.1;
+      font-size: 3rem;
+      margin-bottom: 3.6rem;
+    }
+
+    .box-text p {
+      font-size: 2.2rem;
+      margin-bottom: 4.8rem;
+    }
+
+    .box-text-inner {
+      text-align: left;
+    }
+
+    /**************************/
+    /* FOOTER */
+    /**************************/
+
+    footer {
+      width: 100%;
+      min-height: 30rem;
+      background-color: #4ca4d4;
+      color: #fff;
+      padding: 8rem 32rem;
+    }
+
+    .footer-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+      column-gap: 2rem;
+    }
+    .footer-item .text-social {
+      text-align: right;
+    }
+    .footer-item .social-logo {
+      float: right;
+    }
+
+    .footer-box h3 {
+      font-size: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .footer-box p {
+      font-size: 1.6rem;
+    }
+
+    .social-logo {
+      display: flex;
+      gap: 4rem;
+    }
+
+    .footer-item {
+      line-height: 1.6;
+    }
+
+    .footer-item a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer-item .fa-brands {
+      font-size: 6rem;
+      cursor: pointer;
+      color: #fff;
+
+      transition: all 0.3s;
+    }
+
+    .footer-item .fa-brands:hover {
+      transform: translateY(-3px);
+    }
+
+    /* queries */
+    @media (max-width: 1550px) {
+      footer {
+        padding: 5rem 25rem;
+      }
+
+      .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media (max-width: 1350px) {
+      footer {
+        padding: 5rem 21rem;
+      }
+
+      .container {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
+
+    .menu-btn {
+      cursor: pointer;
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    @media (max-width: 1350px) {
+      footer {
+        padding: 5rem 21rem;
+      }
+
+      .container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
+      .main-nav .nav-phone {
+        display: block;
+        background-color: #ccc;
+        position: fixed;
+        top: 8.7rem;
+        left: -120%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        gap: 1rem;
+        align-items: center;
+
+        transition: all 0.3s ease;
+      }
+
+      #click:checked ~ .menu-btn i::before {
+        content: "\f00d";
+      }
+
+      #click:checked ~ .nav-phone {
+        left: 0%;
+      }
+
+      .nav-phone .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+      }
+
+      .nav-phone .main-nav-list a {
+        font-size: 2.4rem;
+        display: block;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .coment .box-cmt {
+        padding: 4rem 2rem;
+      }
+
+      .container-star {
+        gap: .5rem;
+      }
+
+      .star-box-around {
+        padding: 1rem;
+      }
+
+      .container .share {
+        display: grid;
+        grid-template-columns: .5fr 5fr;
+      }
+
+      .share .star-rating-box {
+        padding: 2rem 1.3rem;
+        border-left: 2px solid #777;
+      }
+
+      .box-cmt-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .search-form {
+        width: 30rem;
+      }
+
+      .section-hero {
+        background-position: left center;
+      }
+
+      .grid-col4 {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 9.6rem;
+        column-gap: 4.8rem;
+      }
+
+      .container .heading-primary {
+        font-size: 4.2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .box-1 p {
+        padding: 0 3rem;
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin-bottom: 8rem;
+        text-align: center;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      .footer-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2rem;
+      }
+
+      footer {
+        padding: 3rem 5rem;
+      }
+
+      .container {
+        max-width: 100%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      .container h2 {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+      }
+
+      .link-login:link,
+      .link-login:visited {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        border-radius: 2px;
+        color: #fff;
+        background-color: #4ca4d4;
+      }
+
+      .main-nav {
+        font-size: 1.2rem;
+        gap: 2rem;
+      }
+
+      header img {
+        width: 10rem;
+        height: auto;
+      }
+
+      .hero-text-box {
+        padding: 0 2rem;
+        background: none;
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .hero-text-box .hero-heading {
+        font-size: 4rem;
+      }
+
+      .hero-text-box .hero-description {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-text-box .btn {
+        font-size: 2rem;
+        padding: 1.2rem 2.4rem;
+        border-radius: 2px;
+      }
+
+      .section-hero {
+        margin-top: 3.5rem;
+        max-width: 100%;
+        position: relative;
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.1),
+            rgba(34, 34, 34, 0.7)
+          ),
+          url(../imgs/banner-mobile.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        color: #fff;
+      }
+
+      .main-nav .nav-phone {
+        top: 6.5rem;
+      }
+
+      .nav-phone .main-nav-list a {
+        font-size: 1.6rem;
+      }
+
+      .footer-box h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .footer-box p {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+
+      .box-inner {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        min-width: 80%;
+        min-height: 2rem;
+        padding: 3rem;
+        gap: 2rem;
+        font-size: 2.4rem;
+        margin-bottom: 8rem;
+        line-height: 2.2;
+      }
+
+      .box-inner i {
+        font-size: 6.2rem;
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+        color: #fff;
+      }
+
+      .box-inner img {
+        width: 100%;
+        height: auto;
+      }
+
+      header i {
+        font-size: 2rem;
+      }
+
+      .footer-item .fa-brands {
+        font-size: 4rem;
+      }
+
+      .footer-item .text-social {
+        text-align: left;
+      }
+
+      .footer-item .social-logo {
+        float: left;
+      }
+
+      .box-inner p {
+        margin-top: 1.6rem;
+        font-size: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+
+      .box-text p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+
+      .box-text {
+        text-align: center;
+        width: 100%;
+      }
+
+      .box-text h3 {
+        font-size: 2.2rem;
+        margin-bottom: 3.6rem;
+      }
+
+      .box-img .btn {
+        text-decoration: none;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 0rem;
+        padding: 0.5rem 2.5rem;
+        background-color: #4ca4d4;
+        color: #fff;
+        border-radius: 9px;
+      }
+
+      .box-img {
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo-login {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .notification {
+        gap: 2rem;
+      }
+    }
+
+    .nav-phone {
+      display: flex;
+      gap: 4.8rem;
+    }
+
+    /**************************/
+    /* STAR RATING */
+    /**************************/
+
+    .star-box {
+      display: flex;
+      justify-content: end;
+      gap: 0.2rem;
+      font-size: 2.2rem;
+      color: #313131;
+      transition: all 0.3s;
+      direction: rtl;
+    }
+
+    .star-box a:hover {
+      color: #f1c40f;
+    }
+
+    .b1:hover ~ a {
+      color: #f1c40f;
+    }
+
+    .b2:hover ~ a {
+      color: #f1c40f;
+    }
+    .b3:hover ~ a {
+      color: #f1c40f;
+    }
+    .b4:hover ~ a {
+      color: #f1c40f;
+    }
+    .b5:hover ~ a {
+      color: #f1c40f;
+    }
+
+    .share {
+      background-color: #fff;
+      margin-top: 5rem;
+      border: 2px solid #777;
+      border-radius: 9px;
+    }
+
+    .grid-col2 {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+    }
+
+    .dg {
+      margin-top: 10rem;
+      font-size: 3.6rem;
+      font-weight: 600;
+    }
+
+    .star-rating-box {
+      padding: 2rem 4rem;
+      border-left: 2px solid #777;
+    }
+
+    .star-box-around {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .star-box-around h2 {
+      font-size: 4rem;  
+    }
+
+    .container-star {
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .container-star i {
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .container-star i:hover {
+      color: #f1c40f;
+    }
+    
+    .star {
+      background-color: #ddd;
+      padding: 8px;
+      margin: 1rem 0;
+      text-align: right;
+      border-radius: 9px;
+      width: 100%;
+    }
+
+    .s5 {width: 100%; background-color: #ffd43b;}
+    /* .s4 {width: 0%; background-color: #ffd4b;} */
+    /* .s3 {width: 0%; background-color: #f44336;}
+    .s2 {width: 0%; background-color: #808080;}
+    .s1 {width: 0%; background-color: #808080;} */
+
+
+    .coment {
+    }
+    
+    .my-coment {
+      background-color: #fff;
+      margin-top: 5rem;
+      border: 2px solid #777;
+      border-radius: 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .my-coment p {
+      font-size: 1.4rem;
+      color: #ccc;
+    }
+
+    .btn-cmt {
+      text-decoration: none;
+      padding: 1.2rem 3.6rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      background-color: #4ca4d4;
+      color: #fff;
+      border: none;
+      border-radius: 9px;
+    }
+
+    .btn-cmt:hover,
+    .btn:hover {
+      background-color: #1971c2;
+    }
+
+    .box-cmt {
+      margin-top: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 6rem;
+      background-color: #fff;
+      /* border: 2px solid #777; */
+      border-radius: 9px;
+      padding: 8rem;
+    }
+
+    .box-cmt-inner {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .box-cmt i {
+      font-size: 1.6rem;
+      margin-right: 0.3rem;
+    }
+
+    .box-cmt .img-cmt {
+      width: 6rem;
+      height: 6rem;
+      cursor: pointer;
+    }
+
+    .star-cmt {
+      font-size: 1.6rem;
+      color: #ffd43b;
+      cursor: pointer;
+    }
+
+    .text-cmt {
+      padding: 2rem;
+      border: 2px solid #ccc;
+      border-radius: 9px;
+    }
+
+    .text-cmt i {
+      cursor: pointer;
+      color: #f03e3e;
+    }
+
+    .text-cmt i:hover {
+      color: #e03131;
+    }
+
+    .text-cmt i:active {
+      color: #f03e3e;
+    }
+    
+    .img-post {
+      cursor: pointer;
+      width: 10rem;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .like {
+      display: flex;
+      align-items: center;
+    }
+    
+    .name {
+      font-size: 2.4rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .date {
+      margin-bottom: 1.4rem;
+      font-size: 1.2rem;
+    }
+    
+    .cmt {
+      margin-bottom: 1.2rem;
+      font-size: 1.6rem;
+    }
+
+    .like-nb {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+    }
+
+    .text-like {
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .text-like:hover,
+    .name:hover {
+      color: #4ca4d4;
+    }
+
+    .nb-page {
+      display: flex;
+      gap: 2rem;
+      color: #666;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    
+    .nb-page .active:hover{
+      cursor: pointer;
+      color: #e03131;
+    }
+
+
+
+
+  </style>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <a href="index.html">
+        <img src="imgs/soulda.png" alt="logo-soulda" height="60px" />
+      </a>
+      <nav class="main-nav">
+        <input type="checkbox" id="click" />
+        <div class="nav-phone">
+          <ul class="main-nav-list">
+            <li><a href="home.html" class="main-nav-link">Trang chủ</a></li>
+            <li><a href="about-login.html" class="main-nav-link">Giới thiệu</a></li>
+            <li><a href="formula.html" class="main-nav-link">Công thức</a></li>
+            <li><a href="blog-login.html" class="main-nav-link">Blog</a></li>
+          </ul>
+
+          <form action="" class="search-form">
+            <input type="search" name="" placeholder="." class="search-box" />
+            <label for="search-box" class="fas fa-search"></label>
+          </form>
+        </div>
+        <li class="main-nav-list notification">
+          <a href="notification.html""><i class="fa-solid fa-bell"></i></a>
+          <a href="user.html"><img class="logo-login" src="imgs/logo-login.png" alt="" /></a>
+        </li>
+        <label for="click" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </nav>
+    </header>
+
+    <!-- Section About -->
+    <section class="container">
+      <div class="box-inner">
+        <div class="box-img">
+          <img src="img/trachanh.png" alt="" />
+          <a href="#" class="btn">Thêm vào yêu thích</a>
+        </div>
+        <div class="box-text">
+          <h3>Công thức</h3>
+          <div class="box-text-inner">
+            <p>
+              <b>Tác giả :</b> Aladdin <br> <br>
+              <b>Honey Lemon Soda</b> <br /> <br>
+              <b>Chuẩn bị :</b> <br> <br>
+              - Nước soda <br />
+              - chanh <br />
+              - mật ong <br />
+              - bạc hà <br /> <br>
+              <b>Cách làm :</b><br /> <br>
+              Vắt lấy đủ 1 chén nước cốt chanh tương đương 220ml, <br> 
+              thêm đường và mật ong hòa với 110ml nước lọc <br>
+              Đổ hỗn hợp vừa pha vào nước soda, thêm 1 vài lá bạc hà <br> 
+              và đá lạnh
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="dg">Đánh giá</h2>
+      <div class="share grid-col2">
+        <div class="star-box-around">
+          <h2>5/5</h2>
+          <div class="star-box">
+            <a class="ion-android-star b1"></a>
+            <a class="ion-android-star b2"></a>
+            <a class="ion-android-star b3"></a>
+            <a class="ion-android-star b4"></a>
+            <a class="ion-android-star b5"></a>
+          </div>
+        </div>
+        <div class="star-rating-box">
+          <div class="star-rating">
+            <div class="container-star">
+              <p>5</p>
+              <i class="fa-solid fa-star"></i>
+              <div class="star s5">100%</div>
+              <p>(5)</p>
+            </div>
+
+            <div class="container-star">
+              <p>4</p>
+              <i class="fa-solid fa-star"></i>
+              <div class="star s4">0%</div>
+              <p>(0)</p>
+            </div>
+            
+            <div class="container-star">
+              <p>3</p>
+              <i class="fa-solid fa-star"></i>
+              <div class="star s3">0%</div>
+              <p>(0)</p>
+            </div>
+            
+            <div class="container-star">
+              <p>2</p>
+              <i class="fa-solid fa-star"></i>
+              <div class="star s2">0%</div>
+              <p>(0)</p>
+            </div>
+            
+            <div class="container-star">
+              <p>1</p>
+              <i class="fa-solid fa-star"></i>
+              <div class="star s1">0%</div>
+              <p>(0)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coment">
+        <h2 class="dg">Bình luận</h2>
+        <div class="my-coment">
+          <p>Viết bình luận của bạn...</p>
+          <a href="#" class="btn-cmt">Gửi bình luận</a>
+        </div>
+        <div class="box-cmt">
+          <div class="box-cmt-inner">
+            <img src="imgs/logo-login.png" alt="" class="img-cmt">
+          <div class="text-cmt">
+            <p class="name">Phạm Văn An</p>
+            <div class="star-box ">
+              <a class="ion-android-star b1 star-cmt"></a>
+              <a class="ion-android-star b2 star-cmt"></a>
+              <a class="ion-android-star b3 star-cmt"></a>
+              <a class="ion-android-star b4 star-cmt"></a>
+              <a class="ion-android-star b5 star-cmt"></a>
+            </div>
+            <p class="date">Vào ngày 25/03/2023</p>
+            <p class="cmt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+            <img class="img-post" src="img/a1a06f75e8896fd3ed3d335df384eead.jpg" alt="">
+            <div class="like">
+              <i class="fa-sharp fa-solid fa-heart"></i>
+              <p class="like-nb">1</p>
+              <p class="text-like">Phản hồi</p>
+            </div>
+          </div>
+          </div>
+          <div class="box-cmt-inner">
+            <img src="imgs/woman.png" alt="" class="img-cmt">
+          <div class="text-cmt">
+            <p class="name">Nguyễn Phương Minh</p>
+            <div class="star-box ">
+              <a class="ion-android-star b1 star-cmt"></a>
+              <a class="ion-android-star b2 star-cmt"></a>
+              <a class="ion-android-star b3 star-cmt"></a>
+              <a class="ion-android-star b4 star-cmt"></a>
+              <a class="ion-android-star b5 star-cmt"></a>
+            </div>
+            <p class="date">Vào ngày 25/03/2023</p>
+            <p class="cmt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+            
+            <div class="like">
+              <i class="fa-sharp fa-solid fa-heart"></i>
+              <p class="like-nb">15</p>
+              <p class="text-like">Phản hồi</p>
+            </div>
+          </div>
+          </div>
+          <div class="box-cmt-inner">
+            <img src="imgs/man.png" alt="" class="img-cmt">
+          <div class="text-cmt">
+            <p class="name">Nguyễn Tuấn Anh</p>
+            <div class="star-box ">
+              <a class="ion-android-star b1 star-cmt"></a>
+              <a class="ion-android-star b2 star-cmt"></a>
+              <a class="ion-android-star b3 star-cmt"></a>
+              <a class="ion-android-star b4 star-cmt"></a>
+              <a class="ion-android-star b5 star-cmt"></a>
+            </div>
+            <p class="date">Vào ngày 25/03/2023</p>
+            <p class="cmt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+            <img class="img-post" src="img/44de3b93829e4e8c73db4ef6eb608a34.jpg" alt="">
+            <div class="like">
+              <i class="fa-sharp fa-solid fa-heart"></i>
+              <p class="like-nb">4</p>
+              <p class="text-like">Phản hồi</p>
+            </div>
+          </div>
+          </div>
+          <div class="nb-page">
+            <p class="active">1</p>
+            <p class="active">2</p>
+            <p class="active">3</p>
+            <p class="active">4</p>
+            <p>....</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-box">
+        <div class="footer-item">
+          <h3>Địa chỉ</h3>
+          <p>181 Âu Cơ, Tây Hồ, Hà Nội</p>
+        </div>
+        <div class="footer-item">
+          <h3>Liên hệ</h3>
+          <p><a href="#">Souldateam@gmail.com</a><br />09187654321</p>
+        </div>
+        <div class="footer-item">
+          <h3>Đến bạn</h3>
+          <p>
+            Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp
+            từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ tốt hơn nữa.
+          </p>
+        </div>
+        <div class="footer-item">
+          <h3 class="text-social">Mạng xã hội</h3>
+          <div class="social-logo">
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

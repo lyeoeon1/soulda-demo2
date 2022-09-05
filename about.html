@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Soulda - Giới thiệu</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      /* scroll-behavior: smooth; */
+      /* scroll-padding-top: 2rem; */
+    }
+
+    html {
+      /* 10px / 16px = 0.625 = 6.25% */
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      color: #555;
+      background-color: #edf6fb;
+    }
+
+    /**************************/
+    /* Header */
+    /**************************/
+
+    .header {
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3.2rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    /**************************/
+    /* NAV */
+    /**************************/
+
+    .main-nav {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+      font-weight: 500;
+    }
+
+    .main-nav-list {
+      list-style: none;
+      align-items: center;
+      display: flex;
+      gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      text-decoration: none;
+      color: #555;
+
+      transition: all 0.3s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active {
+      color: #4ca4d4;
+    }
+
+    .link-login:link,
+    .link-login:visited {
+      display: inline-block;
+      padding: 1.2rem 2.4rem;
+      border-radius: 9px;
+      color: #fff;
+      background-color: #4ca4d4;
+    }
+
+    .link-login:hover,
+    .link-login:active {
+      background-color: #70b6dd;
+    }
+
+    .search-form {
+      width: 40rem;
+      height: 4rem;
+      border: 1.7px solid #555;
+      display: flex;
+      align-items: center;
+      border-radius: 0.5rem;
+    }
+
+    .search-form input {
+      font: 1.6rem;
+      height: 100%;
+      padding: 0 1.2rem;
+      width: 90%;
+      text-transform: none;
+      color: #555;
+    }
+
+    .search-form label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 10%;
+      font-size: 1.8rem;
+      border-top-right-radius: 0.5rem;
+      cursor: pointer;
+      background-color: #fff;
+
+      transition: all 0.3s;
+    }
+
+    .search-form label:hover,
+    .search-form label:active {
+      color: #4ca4d4;
+    }
+
+    /**************************/
+    /* SECTION ABOUT */
+    /**************************/
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .box-1 {
+      padding-top: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box-1 img {
+      width: 100%;
+      background-size: cover;
+      background-position: top;
+      box-shadow: 0 12px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .heading-primary {
+      font-size: 9.6rem;
+      letter-spacing: -1.5px;
+      text-transform: uppercase;
+      padding: 2.4rem 2.4rem;
+      color: #fff;
+      background-color: #5eadd8c0;
+      margin-top: -5.5rem;
+      margin-bottom: 6.5rem;
+    }
+
+    .box-1 p {
+      padding: 0 3rem;
+      font-size: 3.2rem;
+      font-weight: 500;
+      margin-bottom: 8rem;
+      text-align: center;
+      color: #555;
+      line-height: 2.2;
+    }
+
+    .box-1 p::after {
+      content: "";
+    }
+
+    .box-2 h2 {
+      display: inline-block;
+      color: #999;
+      width: auto;
+      margin: 3rem;
+      padding-bottom: 1rem;
+      font-size: 7.2rem;
+    }
+
+    .box-2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box-2 img {
+      width: 100%;
+      border-radius: 2.5rem;
+    }
+
+    .box-inner {
+      position: relative;
+      color: rgb(233, 228, 228);
+      align-self: center;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 5rem;
+      background-color: #4494bf;
+      border-radius: 2.5rem;
+    }
+
+    .box-inner {
+      width: 100%;
+      padding: 3rem;
+      font-size: 2.4rem;
+      margin-bottom: 8rem;
+      line-height: 2.2;
+    }
+
+    .box-inner i {
+      font-size: 6.2rem;
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+    }
+
+    .box-inner p {
+      align-self: center;
+    }
+
+    /**************************/
+    /* FOOTER */
+    /**************************/
+
+    footer {
+      width: 100%;
+      min-height: 30rem;
+      background-color: #4ca4d4;
+      color: #fff;
+      padding: 8rem 32rem;
+    }
+
+    .footer-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+      column-gap: 2rem;
+    }
+
+    .footer-box h3 {
+      font-size: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .footer-box p {
+      font-size: 1.6rem;
+    }
+
+    .social-logo {
+      display: flex;
+      gap: 4rem;
+    }
+
+    .footer-item {
+      line-height: 1.6;
+    }
+
+    .footer-item a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .footer-item .fa-brands {
+      font-size: 6rem;
+      cursor: pointer;
+      color: #fff;
+
+      transition: all 0.3s;
+    }
+
+    .footer-item .fa-brands:hover {
+      transform: translateY(-3px);
+    }
+
+    .footer-item .text-social {
+      text-align: right;
+    }
+    .footer-item .social-logo {
+      float: right;
+    }
+
+    /* queries */
+    @media (max-width: 1550px) {
+      footer {
+        padding: 5rem 25rem;
+      }
+
+      .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media (max-width: 1350px) {
+      footer {
+        padding: 5rem 21rem;
+      }
+
+      .container {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
+
+    .menu-btn {
+      cursor: pointer;
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    @media (max-width: 1350px) {
+      footer {
+        padding: 5rem 21rem;
+      }
+
+      .container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
+      .main-nav .nav-phone {
+        display: block;
+        background-color: #ccc;
+        position: fixed;
+        top: 8.7rem;
+        left: -120%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        gap: 1rem;
+        align-items: center;
+
+        transition: all 0.3s ease;
+      }
+
+      #click:checked ~ .menu-btn i::before {
+        content: "\f00d";
+      }
+
+      #click:checked ~ .nav-phone {
+        left: 0%;
+      }
+
+      .nav-phone .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+      }
+
+      .nav-phone .main-nav-list a {
+        font-size: 2.4rem;
+        display: block;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .search-form {
+        width: 30rem;
+      }
+
+      .section-hero {
+        background-position: left center;
+      }
+
+      .grid-col4 {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 9.6rem;
+        column-gap: 4.8rem;
+      }
+
+      .container .heading-primary {
+        font-size: 4.2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .box-1 p {
+        padding: 0 3rem;
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin-bottom: 8rem;
+        text-align: center;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      .footer-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2rem;
+      }
+
+      footer {
+        padding: 3rem 5rem;
+      }
+
+      .container {
+        max-width: 100%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      .container h2 {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+      }
+
+      .link-login:link,
+      .link-login:visited {
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        border-radius: 2px;
+        color: #fff;
+        background-color: #4ca4d4;
+      }
+
+      .main-nav {
+        font-size: 1.2rem;
+        gap: 2rem;
+      }
+
+      header img {
+        width: 10rem;
+        height: auto;
+      }
+
+      .hero-text-box {
+        padding: 0 2rem;
+        background: none;
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .hero-text-box .hero-heading {
+        font-size: 4rem;
+      }
+
+      .hero-text-box .hero-description {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .hero-text-box .btn {
+        font-size: 2rem;
+        padding: 1.2rem 2.4rem;
+        border-radius: 2px;
+      }
+
+      .section-hero {
+        margin-top: 3.5rem;
+        max-width: 100%;
+        position: relative;
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.1),
+            rgba(34, 34, 34, 0.7)
+          ),
+          url(../imgs/banner-mobile.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        color: #fff;
+      }
+
+      .main-nav .nav-phone {
+        top: 6.5rem;
+      }
+
+      .nav-phone .main-nav-list a {
+        font-size: 1.6rem;
+      }
+
+      .footer-box h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .footer-box p {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+
+      .box-inner {
+        display: flex;
+        flex-direction: column;
+        min-width: 80%;
+        min-height: 2rem;
+        padding: 3rem;
+        font-size: 2.4rem;
+        margin-bottom: 8rem;
+        line-height: 2.2;
+      }
+
+      .box-inner i {
+        font-size: 6.2rem;
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+        color: #fff;
+      }
+
+      .box-inner img {
+        width: 100%;
+        height: auto;
+      }
+
+      header i {
+        font-size: 2rem;
+      }
+
+      .footer-item .fa-brands {
+        font-size: 4rem;
+      }
+
+      .footer-item .text-social {
+        text-align: left;
+      }
+
+      .footer-item .social-logo {
+        float: left;
+      }
+
+      .box-inner p {
+        margin-top: 1.6rem;
+        font-size: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 100%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
+
+    .nav-phone {
+      display: flex;
+      gap: 4.8rem;
+    }
+  </style>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <a href="index.html">
+        <img src="imgs/soulda.png" alt="logo-soulda" height="60px" />
+      </a>
+      <nav class="main-nav">
+        <input type="checkbox" id="click" />
+        <div class="nav-phone">
+          <ul class="main-nav-list">
+            <li><a href="home.html" class="main-nav-link">Trang chủ</a></li>
+            <li><a href="about.html" class="main-nav-link">Giới thiệu</a></li>
+            <li><a href="#" class="main-nav-link">Công thức</a></li>
+            <li><a href="blog.html" class="main-nav-link">Blog</a></li>
+          </ul>
+
+          <form action="" class="search-form">
+            <input type="search" name="" placeholder="." class="search-box" />
+            <label for="search-box" class="fas fa-search"></label>
+          </form>
+        </div>
+        <li class="main-nav-list">
+          <a href="signin-1.html" class="main-nav-link link-login">Đăng nhập</a>
+        </li>
+        <label for="click" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </nav>
+    </header>
+
+    <!-- Section About -->
+    <section class="container">
+      <div class="box-1">
+        <img src="img/b1.png" alt="" />
+        <h2 class="heading-primary">Câu chuyện về Soulda</h2>
+        <p>
+          Soulda ra đời để mang đến cho tất cả mọi người một nơi để cùng chia sẻ
+          niềm đam mê về Soda, nơi mọi người có thể dễ dàng chia sẻ và tìm kiếm
+          những công thứ pha chế thức uống giải khát này
+        </p>
+      </div>
+      <div class="box-2">
+        <h2>Với người dùng</h2>
+        <div class="box-inner">
+          <i class="fa-solid fa-quote-right"></i>
+          <img src="img/b2.png" alt="" />
+          <p>
+            Mang đến trải nghiệm đơn giản, dễ dàng đăng tải, tìm kiếm thứ đồ
+            uống mà mình thích, dễ dàng làm theo cũng như xem các đánh giá phù
+            hợp.
+          </p>
+        </div>
+      </div>
+      <div class="box-2">
+        <h2>Với cộng đồng</h2>
+        <div class="box-inner">
+          <i class="fa-solid fa-quote-right"></i>
+          <img src="img/b3.png" alt="" />
+          <p>
+            Giúp mọi người dễ dàng tiếp cận Soda, mang Soda đến gần mọi người
+            hơn Ai cũng có thể tự làm cho mình một ly Soda
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-box">
+        <div class="footer-item">
+          <h3>Địa chỉ</h3>
+          <p>181 Âu Cơ, Tây Hồ, Hà Nội</p>
+        </div>
+        <div class="footer-item">
+          <h3>Liên hệ</h3>
+          <p><a href="#">Souldateam@gmail.com</a><br />09187654321</p>
+        </div>
+        <div class="footer-item">
+          <h3>Đến bạn</h3>
+          <p>
+            Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp
+            từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ tốt hơn nữa.
+          </p>
+        </div>
+        <div class="footer-item">
+          <h3 class="text-social">Mạng xã hội</h3>
+          <div class="social-logo">
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

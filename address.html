@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Soulda - Tài khoản</title>
+    <style></style>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      /* scroll-behavior: smooth; */
+      /* scroll-padding-top: 2rem; */
+    }
+
+    html {
+      /* 10px / 16px = 0.625 = 6.25% */
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      color: #555;
+      background-color: #edf6fb;
+    }
+
+    /**************************/
+    /* Header */
+    /**************************/
+
+    .header {
+      background-color: #fff;
+      font-weight: 500;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3.2rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    /**************************/
+    /* NAV */
+    /**************************/
+
+    .main-nav {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+      font-weight: 600;
+    }
+
+    .main-nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+    }
+
+    .notification {
+      gap: 3rem;
+    }
+
+    .fa-solid {
+      color: #555;
+      font-size: 2.5rem;
+    }
+
+    .fa-solid:hover {
+      color: #4ca4d4;
+    }
+
+    .logo-login {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+
+    .logo-login:hover {
+      border: 1px solid #5eadd8;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      text-decoration: none;
+      color: #555;
+
+      transition: all 0.3s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active {
+      color: #4ca4d4;
+    }
+
+    .link-login:link,
+    .link-login:visited {
+      display: inline-block;
+      padding: 1.2rem 2.4rem;
+      border-radius: 9px;
+      color: #fff;
+      background-color: #4ca4d4;
+    }
+
+    .link-login:hover,
+    .link-login:active {
+      background-color: #70b6dd;
+    }
+
+    .search-form {
+      width: 40rem;
+      height: 4rem;
+      border: 1.7px solid #555;
+      display: flex;
+      align-items: center;
+      border-radius: 0.5rem;
+    }
+
+    .search-form input {
+      font: 1.6rem;
+      height: 100%;
+      padding: 0 1.2rem;
+      width: 90%;
+      text-transform: none;
+      color: #555;
+    }
+
+    .search-form label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 10%;
+      font-size: 1.8rem;
+      border-top-right-radius: 0.5rem;
+      cursor: pointer;
+      background-color: #fff;
+
+      transition: all 0.3s;
+    }
+
+    .search-form label:hover,
+    .search-form label:active {
+      color: #4ca4d4;
+    }
+
+    /*******************************/
+    /* Content */
+    /*******************************/
+    .container {
+      font-size: 2rem;
+      width: 100%;
+      height: 100vh;
+      padding: 13rem 10rem 5rem 10rem;
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50rem 1fr;
+      font-size: 1.8rem;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      gap: 5.5rem;
+      padding: 5rem 10rem;
+    }
+
+    .navbar-inner {
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      padding: 4.5rem 3.5rem;
+      border-radius: 9px;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-inner a {
+      color: #555;
+    }
+
+    .navbar-inner .logo-user {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    .navbar-inner .box-user {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .box-user p {
+      padding-bottom: 0.5rem;
+    }
+
+    .main {
+      padding: 5rem 10rem;
+    }
+
+    .user-list,
+    .user-list ul {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .list-inner li {
+      margin: 1.5rem 3rem 1rem 4.5rem;
+    }
+
+    .list-inner li:hover,
+    .book a:hover {
+      color: #4ca4d4;
+    }
+
+    .book {
+      display: flex;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+
+    .book:last-child {
+      margin-bottom: 0;
+    }
+
+    .fa-user,
+    .fa-address-book {
+      font-size: 2.2rem;
+      color: #4ca4d4;
+      margin-right: 0.8rem;
+    }
+    .fa-pen {
+      font-size: 1.4rem;
+      color: #4ca4d4;
+      margin-right: 0.5rem;
+    }
+
+    .link {
+      color: #4ca4d4;
+    }
+
+    /*******************************/
+    /* Navbar */
+    /*******************************/
+
+    /*******************************/
+    /* Main */
+    /*******************************/
+    .heading {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    .btn {
+      float: right;
+      margin-top: 4rem;
+      display: inline-block;
+      padding: 1.6rem 4.8rem;
+      background-color: #fa5252;
+      border-radius: 9px;
+      color: #fff;
+    }
+
+    .btn:hover {
+      background-color: #e03131;
+    }
+
+    /* main-inner */
+
+    .box-address {
+      margin-top: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .box-inner {
+      border-radius: 9px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 3rem 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .text p {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .button-top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn-r,
+    .btn-l {
+      font-size: 1.6rem;
+      padding: 0.5rem 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #ccc;
+      color: #555;
+    }
+
+    .btn-r:hover,
+    .btn-l:hover {
+      color: #ccc;
+    }
+
+    .button-bot {
+      font-size: 1.6rem;
+      padding: 0.5rem 2rem;
+      background-color: #4ca4d4;
+      color: #fff;
+    }
+
+    .button-bot:hover {
+      background-color: #70b6dd;
+    }
+   /* Queries */
+
+   @media (max-width: 1550px) {
+      footer {
+        padding: 5rem 25rem;
+      }
+
+      .container {
+        padding-left: 8rem;
+        padding-right: 8rem;
+      }
+    }
+
+    .menu-btn {
+      cursor: pointer;
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    .nav-phone {
+      display: flex;
+      gap: 4.8rem;
+    }
+
+    @media (max-width: 1350px) {
+      footer {
+        padding: 5rem 21rem;
+      }
+
+      .container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
+      .main-nav .nav-phone {
+        display: block;
+        background-color: #ccc;
+        position: fixed;
+        top: 8.7rem;
+        left: -120%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        gap: 1rem;
+        align-items: center;
+
+        transition: all 0.3s ease;
+      }
+
+      #click:checked ~ .menu-btn i::before {
+        content: "\f00d";
+      }
+
+      #click:checked ~ .nav-phone {
+        left: 0%;
+      }
+
+      .nav-phone .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+      }
+
+      .nav-phone .main-nav-list a {
+        font-size: 2.4rem;
+        display: block;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .container {
+        width: 85%;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .main-nav .nav-phone {
+        top: 6.5rem;
+      }
+
+      .search-form {
+        width: 30rem;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      /* .navbar-inner {
+        padding: 4.5rem 3.5rem;
+      } */
+
+      .main-nav {
+        gap: 2rem;
+      }
+
+      .notification {
+        gap: 2rem;
+      }
+
+      .header .logo-main {
+        width: 10rem;
+        height: auto;
+      }
+
+      .logo-login {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .navbar-inner * {
+        font-size: 98%;
+      }
+
+      .navbar-inner .logo-user {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .main form .input {
+        margin-top: 0.6rem;
+        width: 100%;
+        height: 4.5rem;
+        border-radius: 9px;
+        padding: 2rem;
+      }
+
+      .navbar {
+        padding: 5rem 0rem;
+      }
+
+      .main {
+        padding: 6rem 0rem;
+      }
+
+      .btn {
+        padding: 1rem 2.6rem;
+        border-radius: 5px;
+      }
+
+      .box-inner {
+        flex-direction: column;
+        padding: 2.5rem 1rem;
+        gap: 4rem;
+      }
+    }
+
+  </style>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <a href="index.html">
+        <img class="logo-main" src="imgs/soulda.png" alt="logo-soulda" height="60px" />
+      </a>
+      <nav class="main-nav">
+        <input type="checkbox" id="click" />
+        <div class="nav-phone">
+          <ul class="main-nav-list">
+            <li><a href="home.html" class="main-nav-link">Trang chủ</a></li>
+            <li><a href="about-login.html" class="main-nav-link">Giới thiệu</a></li>
+            <li><a href="formula.html" class="main-nav-link">Công thức</a></li>
+            <li><a href="blog-login.html" class="main-nav-link">Blog</a></li>
+          </ul>
+
+          <form action="" class="search-form">
+            <input type="search" name="" placeholder="." class="search-box" />
+            <label for="search-box" class="fas fa-search"></label>
+          </form>
+        </div>
+        <li class="main-nav-list notification">
+          <a href="notification.html""><i class="fa-solid fa-bell"></i></a>
+          <a href="user.html"><img class="logo-login" src="imgs/logo-login.png" alt="" /></a>
+        </li>
+        <label for="click" class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <div class="container">
+      <div class="content">
+        <div class="navbar">
+          <p class="link">Trang chủ > Tài khoản</p>
+          <div class="navbar-inner">
+            <div class="box-user">
+              <img class="logo-user" src="imgs/logo-login.png" alt="" />
+              <div class="info-user">
+                <p>
+                  Tài khoản của : <br />
+                  <b>Nguyễn Minh Hiếu</b>
+                </p>
+                <i class="fa-solid fa-pen"></i><a href="#">Sửa</a>
+              </div>
+            </div>
+
+            <ul class="user-list">
+              <li>
+                <i class="fa-solid fa-user"></i>
+                <b>Tài khoản</b>
+                <ul class="list-inner">
+                  <a href="user.html"><li>Thông tin tài khoản</li></a>
+                  <a href="notification.html"><li>Thông báo</li></a>
+                  <a href="pass.html"><li>Mật khẩu</li></a>
+                  <a href="favourite.html"><li>Yêu thích</li></a>
+                </ul>
+              </li>
+              <div class="book">
+                <i class="fa-solid fa-address-book"></i>
+                <a style="color: #4ca4d4" href="#"><b>Sổ địa chỉ</b></a>
+              </div>
+              <div class="book">
+                <i class="fa-solid fa-address-book"></i>
+                <a href="post.html"><b>Quản lý bài</b></a>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="main">
+          <p class="heading">Sổ địa chỉ</p>
+          <div class="box-address">
+            <div class="box-inner">
+              <div class="text">
+                <p>Họ và tên : <b>Phạm Văn A</b></p>
+                <p>Điện thoại : <b>0123456789</b></p>
+                <p>
+                  Địa chỉ :
+                  <b>8A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội</b>
+                </p>
+              </div>
+              <div class="button">
+                <div href="#" class="button-top">
+                  <a href="#" class="btn-r">Sửa</a>
+                  <a href="#" class="btn-l">Xóa</a>
+                </div>
+                <a href="#" class="button-bot">Thêm làm mặc định</a>
+              </div>
+            </div>
+            <div class="box-inner">
+              <div class="text">
+                <p>Họ và tên : <b>Phạm Văn A</b></p>
+                <p>Điện thoại : <b>0123456789</b></p>
+                <p>
+                  Địa chỉ :
+                  <b>8A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội</b>
+                </p>
+              </div>
+              <div class="button">
+                <div href="#" class="button-top">
+                  <a href="#" class="btn-r">Sửa</a>
+                  <a href="#" class="btn-l">Xóa</a>
+                </div>
+                <a href="#" class="button-bot">Thêm làm mặc định</a>
+              </div>
+            </div>
+          </div>
+          <a href="add-adress.html" class="btn">Thêm địa chỉ mới</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
